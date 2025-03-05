@@ -207,6 +207,12 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-healthcareservice"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
 		<!--LIFESTYLE FACTOR-->
 		<resource>
 			<reference>
