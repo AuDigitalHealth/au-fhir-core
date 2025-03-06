@@ -18,7 +18,7 @@
     <element id="HealthcareService">
       <path value="HealthcareService"/>
     </element>
-    <element id="Practitioner.identifier">
+    <element id="HealthcareService.identifier">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -35,7 +35,7 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Practitioner.identifier"/>
+      <path value="HealthcareService.identifier"/>
       <definition value="An identifier that applies to this person in this role."/>
       <slicing>
         <discriminator>
@@ -46,7 +46,7 @@
       </slicing>
       <mustSupport value="true"/>
     </element>
-    <element id="Practitioner.identifier:hpio">
+    <element id="HealthcareService.identifier:hpio">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
         <extension url="code">
           <valueCode value="SHALL:populate-if-known"/>
@@ -63,7 +63,7 @@
           <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
         </extension>
       </extension>
-      <path value="Practitioner.identifier"/>
+      <path value="HealthcareService.identifier"/>
       <sliceName value="hpio"/>
       <max value="1"/>
       <type>
