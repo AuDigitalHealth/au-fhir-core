@@ -741,6 +741,31 @@
 			<description value="Shows an example of a nasopharyngeal swab specimen referenced by the [Observation - COVID Pathology Result (Not detected)](Observation-pathresult-covid-1.html) example for the *AU Core Pathology Result Observation* profile. Patient: Mr. Li Wang."/>
 			<exampleCanonical value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
 		</resource>
+		<!--HEALTHCARESERVICE EXAMPLES-->
+		<!-- <resource>
+			<reference>
+				<reference value="HealthcareService/tbd"/>
+			</reference>
+			<name value="tbd"/>
+			<description value="tbd"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/tbd"/>
+			</reference>
+			<name value="tbd"/>
+			<description value="tbd"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="HealthcareService/tbd"/>
+			</reference>
+			<name value="tbd"/>
+			<description value="tbd"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-healthcareservice"/>
+		</resource> -->
 		<!--PAGES-->
 		<page>
 			<nameUrl value="toc.html"/>
