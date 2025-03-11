@@ -115,6 +115,10 @@
       </extension>
       <path value="HealthcareService.type" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/service-type-1"/>
+      </binding>
     </element>
     <element id="HealthcareService.specialty">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -134,6 +138,10 @@
         </extension>
       </extension>
       <path value="HealthcareService.specialty" />      
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1"/>
+      </binding>
     </element>
     <element id="HealthcareService.location">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -218,6 +226,10 @@
       </extension>
       <path value="HealthcareService.serviceProvisionCode" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://terminology.hl7.org.au/ValueSet/service-provision-conditions"/>
+      </binding>
     </element>
     <element id="HealthcareService.availableTime.availableStartTime.extension:timeZone">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
