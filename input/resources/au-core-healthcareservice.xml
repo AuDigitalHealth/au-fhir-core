@@ -43,7 +43,7 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <definition value="An identifier that applies to this person in this role."/>
+      <definition value="Identifier for the organization that is used to identify the healthcare service across multiple disparate systems."/>
     </element>
     <element id="HealthcareService.identifier:hpio">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
