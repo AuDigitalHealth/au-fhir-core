@@ -44,6 +44,7 @@
         <rules value="open"/>
       </slicing>
       <definition value="Identifier for the organization that is used to identify the healthcare service across multiple disparate systems."/>
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.identifier:hpio">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -138,6 +139,7 @@
         </extension>
       </extension>
       <path value="HealthcareService.specialty" />
+      <mustSupport value="true" />
       <binding>
         <strength value="extensible"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/clinical-specialty-1"/>
@@ -190,6 +192,7 @@
       </extension>
       <path value="HealthcareService.name" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.telecom">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
@@ -209,6 +212,7 @@
         </extension>
       </extension>
       <path value="HealthcareService.telecom" />
+      <mustSupport value="true" />
     </element>
     <element id="HealthcareService.coverageArea">
       <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
