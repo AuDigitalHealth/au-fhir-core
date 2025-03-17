@@ -90,7 +90,6 @@
         </extension>
       </extension>
       <path value="HealthcareService.providedBy" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-organization" />
