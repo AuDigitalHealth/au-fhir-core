@@ -111,8 +111,8 @@ The following search parameters are candidates for future discussions regarding 
 
     Example:
 
-    1. GET [base]/HealthcareService?service-type=http://snomed.info/sct|1223451000168109
-    1. GET [base]/HealthcareService?service-type=http://snomed.info/sct|1223451000168109,http://snomed.info/sct|1223411000168108
+    1. GET [base]/HealthcareService?service-type=http://snomed.info/sct\|1223451000168109
+    1. GET [base]/HealthcareService?service-type=http://snomed.info/sct\|1223451000168109,http://snomed.info/sct\|1223411000168108
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified healthcare service type(s) ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -123,8 +123,8 @@ The following search parameters are candidates for future discussions regarding 
 
     Example:
 
-    1. GET [base]/HealthcareService?specialty=http://snomed.info/sct|394591006
-    1. GET [base]/HealthcareService?specialty=http://snomed.info/sct|394591006,721961006
+    1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394591006
+    1. GET [base]/HealthcareService?specialty=http://snomed.info/sct\|394591006,721961006
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -183,8 +183,8 @@ The following search parameters are candidates for future discussions regarding 
 
     Example:
 
-    1. GET [base]/HealthcareService?endpoint.connection-type=http://hl7.org.au/fhir/CodeSystem/smd-interfaces|http://ns.electronichealth.net.au/smd/intf/SealedMessageDelivery/TLS/2010
-    1. GET [base]/HealthcareService?endpoint.payload-type=http://hl7.org.au/fhir/CodeSystem/smd-interfaces|http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706
+    1. GET [base]/HealthcareService?endpoint.connection-type=http://hl7.org.au/fhir/CodeSystem/smd-interfaces\|http://ns.electronichealth.net.au/smd/intf/SealedMessageDelivery/TLS/2010
+    1. GET [base]/HealthcareService?endpoint.payload-type=http://hl7.org.au/fhir/CodeSystem/smd-interfaces\|http://ns.hl7.org.au/hl7v2/profiles/HL7AU-OO-REF-SIMPLIFIED-201706
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified endpoint ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
@@ -194,7 +194,7 @@ The following search parameters are candidates for future discussions regarding 
 
     Example:
 
-    1. GET [base]/HealthcareService?program=http://snomed.info/sct|310004004
+    1. GET [base]/HealthcareService?program=http://snomed.info/sct\|310004004
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified program ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
@@ -204,7 +204,7 @@ The following search parameters are candidates for future discussions regarding 
 
     Example:
 
-    1. GET [base]/HealthcareService?service-category=http://terminology.hl7.org/CodeSystem/service-category|17
+    1. GET [base]/HealthcareService?service-category=http://terminology.hl7.org/CodeSystem/service-category\|17
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
