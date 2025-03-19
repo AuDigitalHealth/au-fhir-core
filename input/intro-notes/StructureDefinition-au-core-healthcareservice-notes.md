@@ -22,6 +22,35 @@
         <td><code>token</code></td>
         <td>The requester <b>SHALL</b> provide both the system and code values. The responder <b>SHALL</b> support both.<br/><br/>The requester <b>SHOULD</b> support search using HPIO identifiers as defined in the profile. The responder <b>SHOULD</b> support search using the using HPIO, as defined in the profile.</td>
   </tr>
+  <tr>
+        <td>organization</td>
+        <td><b>MAY</b></td>
+        <td><code>reference</code></td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+  </tr>
+  <tr>
+        <td>location</td>
+        <td><b>MAY</b></td>
+        <td><code>reference</code></td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+  </tr>
+  <tr>
+        <td>coverageArea</td>
+        <td><b>MAY</b></td>
+        <td><code>reference</code></td>
+        <td>The requester <b>SHALL</b> provide at least an id value and <b>MAY</b> provide both the Type and id values. The responder <b>SHALL</b> support both.</td>
+  </tr>
+  <tr>
+        <td>type</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+  </tr><tr>
+        <td>specialty</td>
+        <td><b>SHOULD</b></td>
+        <td><code>token</code></td>
+        <td>The requester <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The responder <b>SHALL</b> support both.</td>
+  </tr>
   
  </tbody>
 </table>
