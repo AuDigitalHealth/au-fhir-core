@@ -12,4 +12,4 @@ The following are supported usage scenarios for this profile:
 - See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
 - A healthcare service's HPIO **SHOULD** be used in `HealthcareService.identifier` if available.
 - `HealthcareService.category` provides an efficient way of supporting system interactions, e.g. restricting searches. Implementers need to understand that data categorisation is somewhat subjective. The categorisation applied by the source may not align with a receiver’s expectations. 
-
+- The coverage area that a service is intended for/available to **SHOULD** be defined using one or more instances of the `coverageArea` element, with the address elements of the referenced `Location` populated depending on the type of coverage area to be defined.
