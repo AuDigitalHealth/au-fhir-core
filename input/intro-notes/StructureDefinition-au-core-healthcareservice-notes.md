@@ -208,7 +208,7 @@ The following search parameters are candidates for future discussions regarding 
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD / SHALL** support searching using the combination of the **[`service-type`](https://hl7.org/fhir/R4/relatedperson.html#search)**, **[`coverage-area`](https://hl7.org/fhir/R4/relatedperson.html#search)** and **[`active`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameters:
+1. **SHOULD / SHALL** support searching using the combination of the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)**, **[`coverage-area`](https://hl7.org/fhir/R4/healthcareservice.html#search)** and **[`active`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameters:
 
     `GET [base]/HealthcareService?service-type={system|}[code]{,{system|}[code],...}&coverage-area.address-=[string]&active=[code]`
 
