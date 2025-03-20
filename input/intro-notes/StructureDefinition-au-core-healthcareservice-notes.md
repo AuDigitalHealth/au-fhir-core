@@ -71,7 +71,7 @@ The following search parameters are candidates for future discussions regarding 
 
 1. **SHOULD / SHALL** support searching using the **[`active`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
-    `GET [base]/HealthcareService?active=[status]`
+    `GET [base]/HealthcareService?active=[code]`
      
      Example: 
     
@@ -207,6 +207,17 @@ The following search parameters are candidates for future discussions regarding 
     1. GET [base]/HealthcareService?service-category=http://terminology.hl7.org/CodeSystem/service-category\|17
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified category ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
+
+1. **SHOULD / SHALL** support searching using the combination of the **[`service-type`](https://hl7.org/fhir/R4/relatedperson.html#search)**, **[`coverage-area`](https://hl7.org/fhir/R4/relatedperson.html#search)** and **[`active`](https://hl7.org/fhir/R4/relatedperson.html#search)** search parameters:
+
+    `GET [base]/HealthcareService?service-type={system|}[code]{,{system|}[code],...}&coverage-area.address-=[string]&active=[code]`
+
+    Example:
+
+      1. GET [base]/HealthcareService?service-type=http://snomed.info/sc\|310080006&coverage-area.address-postalcode=4868,4867&active=true
+
+    *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the service type, coverage area and active status ([how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
 
 #### Mandatory Search Parameters
 
