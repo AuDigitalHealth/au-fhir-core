@@ -55,11 +55,11 @@
  </tbody>
 </table>
 
-#### CANDIDATE Search Parameters
+#### Mandatory Search Parameters
 
-The following search parameters are candidates for future discussions regarding which ones to include and whether mandatory or optional. 
+The following search parameters and search parameter combinations **SHALL** be supported:
 
-1. **SHOULD / SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+1. **SHALL** support searching using the **[`identifier`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?identifier=[system|][code]`
 
@@ -69,17 +69,7 @@ The following search parameters are candidates for future discussions regarding 
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the identifier ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD / SHALL** support searching using the **[`active`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
-
-    `GET [base]/HealthcareService?active=[code]`
-     
-     Example: 
-    
-      1. GET [base]/HealthcareService?active=true
-
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified active status 
-
-1. **SHOULD / SHALL** support searching using the **[`name`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+1. **SHALL** support searching using the **[`name`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
     `GET [base]/HealthcareService?name=[string]`
 
@@ -87,24 +77,28 @@ The following search parameters are candidates for future discussions regarding 
 
     1. GET [base]/HealthcareService?name=Albion%20Hospital%20Radiology%20Service
 
-    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#token))
+    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHOULD / SHALL** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
-    - **SHOULD** support searching by organisation name (e.g. `organization.name=[string]`)
-    - **SHOULD** support searching by organisation identifier (e.g. `organization.identifier=[system|][code]`)
+#### Optional Search Parameters:
 
-    `GET [base]/HealthcareService?organization.name=[string]`
+The following search parameters and search parameter combinations **SHOULD** be supported:
+
+1. **SHOULD** support searching using the **[`organization`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+    - **SHOULD** support chained searching of organisation canonical identifier `organization.identifier` (e.g. `organization.identifier=[system|][code]`)
+    - **MAY** support chained searching of organisation name `organization.name` (e.g. `organization.name=[string]`)
 
     `GET [base]/HealthcareService?organization.identifier=[system|][code]`
 
+    `GET [base]/HealthcareService?organization.name=[string]`
+
     Example:
 
-    1. GET [base]/HealthcareService?organization.name=murrabit%20public%20hospital
     1. GET [base]/HealthcareService?organization.identifier=http://ns.electronichealth.net.au/id/hi/hpio/1.0\|8003626566706976
-
+    1. GET [base]/HealthcareService?organization.name=murrabit%20public%20hospital
+    
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified organisation ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
 
-1. **SHOULD / SHALL** support searching using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter, in order to search for a HealthcareService based on the type of service(s) it provides or offers.
+1. **SHOULD** support searching using the **[`service-type`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter, in order to search for a HealthcareService based on the type of service(s) it provides or offers.
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `service-type` (e.g.`service-type={system|}[code],{system|}[code],...`)
 
     `GET [base]/HealthcareService?service-type={system|}[code]{,{system|}[code],...}`
@@ -116,7 +110,7 @@ The following search parameters are candidates for future discussions regarding 
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified healthcare service type(s) ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD / SHALL** support searching using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`specialty`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
     - **SHOULD** support *[multipleOr](http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)* search on `specialty` (e.g.`specialty={system|}[code],{system|}[code],...`)
 
     `GET [base]/HealthcareService?specialty={system|}[code]{,{system|}[code],...}`
@@ -128,7 +122,7 @@ The following search parameters are candidates for future discussions regarding 
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified specialty ([how to search by token](http://hl7.org/fhir/R4/search.html#token))
 
-1. **SHOULD / SHALL** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+1. **SHOULD** support searching using the **[`location`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
     - **SHOULD** support searching by location name (e.g. `location.name=[string]`)
     - **SHOULD** support searching by location address parts (e.g. `location.address-state=[string]`, `location.address-city=[string]`, `location.address-postalcode=[string]`)
 
@@ -148,6 +142,19 @@ The following search parameters are candidates for future discussions regarding 
     1. GET [base]/HealthcareService?location.address-postalcode=4868
 
     *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified location ([how to search by reference](http://hl7.org/fhir/R4/search.html#reference))
+
+#### Other search candidates (to be removed)
+
+1. **SHOULD / SHALL** support searching using the **[`active`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
+
+    `GET [base]/HealthcareService?active=[code]`
+     
+     Example: 
+    
+      1. GET [base]/HealthcareService?active=true
+
+    *Implementation Notes:* Fetches a bundle containing any HealthcareService resources matching the specified active status 
+
 
 1. **SHOULD / SHALL** support searching using the **[`characteristic`](https://hl7.org/fhir/R4/healthcareservice.html#search)** search parameter:
 
@@ -217,16 +224,3 @@ The following search parameters are candidates for future discussions regarding 
       1. GET [base]/HealthcareService?service-type=http://snomed.info/sc\|310080006&coverage-area.address-postalcode=4868,4867&active=true
 
     *Implementation Notes:* Fetches a bundle of all HealthcareService resources for the service type, coverage area and active status ([how to search by token](http://hl7.org/fhir/R4/search.html#token) and [how to search by string](http://hl7.org/fhir/R4/search.html#string))
-
-
-#### Mandatory Search Parameters
-
-The following search parameters and search parameter combinations **SHALL** be supported:
-
-TBD
-
-#### Optional Search Parameters:
-
-The following search parameters and search parameter combinations **SHOULD** be supported:
-
-TBD
