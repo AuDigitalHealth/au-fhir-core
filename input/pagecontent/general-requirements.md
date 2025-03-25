@@ -249,6 +249,7 @@ The table below provides a list of AU Core profile elements that allow multiple 
 
 AU Core Profile |Must Support Element|Supported Identifiers
 ---|---|---
+AU Core HealthcareService|HealthcareService.identifier|HPI-O
 AU Core Organization|Organization.identifier|HPI-O, Australian Business Number
 AU Core Patient|Patient.identifier|IHI, Medicare Card Number, DVA Number
 AU Core Practitioner|Practitioner.identifier|HPI-I
