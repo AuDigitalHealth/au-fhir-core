@@ -4,7 +4,7 @@
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
 .vs/au-fhir-core/v17/.suo
-input-cache/**
+
 output/**
 temp/**
 template/**
